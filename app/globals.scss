@@ -1,0 +1,6 @@
+@use './sass/app';
+@use './sass/base/vars' as vars;
+
+body {
+    background-color: vars.$color--background-1;
+}

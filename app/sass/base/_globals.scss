@@ -1,0 +1,24 @@
+@use 'vars' as vars;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: vars.$paragraph-font;
+    font-size: 16px;
+}
+
+.container {
+    width: 95%;
+    max-width: 128rem;
+}
+
+h1, h2, h3 , h4 , h5, h6 {
+    font-family:  vars.$main-font;
+}
