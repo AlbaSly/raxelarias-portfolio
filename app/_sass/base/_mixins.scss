@@ -1,5 +1,11 @@
 @use "vars" as vars;
 
+@mixin small {
+  @media (min-width: vars.$width--xsm) {
+    @content;
+  }
+}
+
 @mixin phone {
   @media (min-width: vars.$width--sm) {
     @content;
@@ -30,6 +36,21 @@
   }
 }
 
+/* Helpers */
+
+@mixin grid($repeat, $spacing) {
+  display: grid;
+  grid-template-columns: repeat($repeat, 1fr);
+  gap: $spacing;
+}
+
+@mixin avoidDragging() {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
 
 /* Shadow Mixins */
 
