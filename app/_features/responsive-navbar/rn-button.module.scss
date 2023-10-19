@@ -1,0 +1,55 @@
+@use "@sass/base/vars" as vars;
+@use "@sass/base/mixins" as mixin;
+
+@mixin element {
+    transition: all .05s ease !important;
+
+    @include mixin.tablet {
+        display: none
+    }
+}
+
+.wrapper {
+    @include element;
+    position: relative;
+}
+
+.buttonContainer {
+    @include element;
+    @include mixin.shadow;
+
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+    border: 2px whitesmoke solid;
+    border-width: 2px;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonIcon {
+    @include element;
+
+    font-size: 32px;
+}
+
+.hiddenCheckbox {
+    @include element;
+
+    display: none;
+
+    & + .buttonContainer {
+        background-color: transparent;
+        color: vars.$color--secondary;
+    }
+
+    &:checked + .buttonContainer {
+        @include mixin.shadow-lg;
+        
+        background-color: vars.$color--secondary;
+        color: white;
+    }
+}

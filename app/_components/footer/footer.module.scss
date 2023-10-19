@@ -1,0 +1,29 @@
+@use '@/app/_sass/base/vars' as vars;
+@use '@/app/_sass/base/mixins' as mixin;
+
+.footerContainer {
+    position: relative;
+    padding: 8rem 0;
+    background-color: vars.$color--background-2;
+    padding: 2rem 0;
+}
+
+.footer {
+    text-align: center;
+    font-family: vars.$main-font;
+}
+
+.footerContent {
+    opacity: 0.75;
+    color: vars.$color--auxiliar;
+}
+
+.colorPrimary {
+    color: vars.$color--primary;
+    font-weight: 500;
+}
+
+.colorSecondary {
+    color: vars.$color--secondary;
+    font-weight: 500;
+}

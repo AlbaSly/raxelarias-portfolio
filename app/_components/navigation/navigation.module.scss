@@ -1,0 +1,47 @@
+@use "@sass/base/vars" as vars;
+@use "@sass/base/mixins" as mixin;
+
+.wrapper {
+  display: none;
+  padding: 1rem 0;
+
+  @include mixin.tablet {
+    display: block;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.navbarLink {
+  transition: all 0.3s ease, font-weight 0s ease-out;
+  letter-spacing: 0.01em;
+
+  text-decoration: none;
+  font-family: vars.$main-font;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: lighten($color: vars.$color--auxiliar, $amount: 5);
+
+  flex: 1 1 0%;
+  border-bottom: 4px transparent solid;
+  padding: 10px 10px;
+
+  @include mixin.avoidDragging;
+
+  &:hover {
+    border-bottom-color: vars.$color--primary;
+  }
+}
+
+.activeNavbarLink {
+  background-color: vars.$color--primary;
+  color: white;
+  border-radius: 8px;
+
+  @include mixin.shadow-md;
+}
