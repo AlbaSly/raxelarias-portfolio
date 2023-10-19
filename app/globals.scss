@@ -1,6 +1,15 @@
-@use './sass/app';
-@use './sass/base/vars' as vars;
+@use "@sass/app";
+@use "@sass/base/vars" as vars;
 
 body {
-    background-color: vars.$color--background-1;
+  background-color: vars.$color--background-1;
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+*, *::before, *::after {
+  transition: all .2s ease-in;
 }
