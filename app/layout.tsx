@@ -21,16 +21,18 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></link>
       </head>
       <body>
-        {/* Header */}
-        <RaxHeader />
-        
-        {/* Dynamic content */}
-        <main>
-          {children}
-        </main>
-        
-        {/* FOOTER */}
-        <RaxFooter />
+        <div className='app-wrapper'>
+          {/* Header */}
+          <RaxHeader />
+          
+          {/* Dynamic content */}
+          <main className='flex-grow'>
+            {children}
+          </main>
+          
+          {/* FOOTER */}
+          <RaxFooter />
+        </div>
       </body>
     </html>
   )

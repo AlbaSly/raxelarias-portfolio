@@ -3,6 +3,13 @@
 
 body {
   background-color: vars.$color--background-1;
+}
+
+*, *::before, *::after {
+  transition: all .2s ease-in;
+}
+
+.app-wrapper {
   position: relative;
   min-height: 100vh;
 
@@ -10,6 +17,6 @@ body {
   flex-direction: column;
 }
 
-*, *::before, *::after {
-  transition: all .2s ease-in;
+.flex-grow {
+  flex-grow: 1;
 }
