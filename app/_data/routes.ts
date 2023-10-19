@@ -1,7 +1,7 @@
 export const ROUTES: Array<IRaxRoute> = [
   {
     label: "Home",
-    path: "/home",
+    path: "/",
   },
   {
     label: "Projects",
@@ -17,7 +17,7 @@ export const ROUTES: Array<IRaxRoute> = [
   },
 ];
 
-interface IRaxRoute {
+export interface IRaxRoute {
   label: string;
   path: string;
 }
